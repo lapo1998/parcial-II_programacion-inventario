@@ -1,4 +1,4 @@
-# Importamos la clase Inventario de su archivo correspondiente.
+#semana 10 mejoramiento de codigo
 from inventario import Inventario
 # Importamos la clase Producto.
 from producto import Producto
@@ -39,7 +39,6 @@ def main():
                 cantidad = int(input("Ingrese la cantidad: "))
                 precio = float(input("Ingrese el precio: "))
                 nuevo_producto = Producto(id_prod, nombre, cantidad, precio)
-                # Llamamos al método de Inventario para añadir el producto.
                 inventario.anadir_producto(nuevo_producto)
             # Manejamos el error si el usuario no ingresa un número.
             except ValueError:
@@ -90,10 +89,8 @@ def main():
         # Lógica para la opción 6: Salir del programa.
         elif opcion == '6':
             print("Saliendo del sistema. ¡Adiós!")
-            # La palabra clave 'break' sale del bucle 'while True'.
             break
-        
-        # Manejo de opciones no válidas.
+    
         else:
             print("Opción no válida. Intente de nuevo.")
 
